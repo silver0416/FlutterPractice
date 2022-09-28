@@ -12,7 +12,12 @@ void main() {
     height: 200,
   );
   var appBody = Center(
-    child: img,
+    child: Container(
+      margin: const EdgeInsets.all(10),
+      color: Colors.amber[600],
+      width: 48,
+      height: 48,
+    ),
   );
   var appBar = AppBar(
     title: appTitle,
