@@ -4,7 +4,7 @@ void main() {
   var appTitle = Text('我的第一個Flutter App'),
       hiFlutter = Text(
         "Hi Flutter\n今天是20220926",
-        style: TextStyle(fontSize: 30, color: Colors.white,decoration: TextDecoration.underline),
+        style: TextStyle(fontSize: 30, color: Colors.blue,decoration: TextDecoration.underline),
       );
   var img = Image.network(
     "https://i.pinimg.com/474x/c1/0d/3e/c10d3e50935a94158c0b79b1fcabe979.jpg",
@@ -13,10 +13,11 @@ void main() {
   );
   var appBody = Center(
     child: Container(
-      margin: const EdgeInsets.all(10),
-      color: Colors.amber[600],
-      width: 48,
-      height: 48,
+      child: hiFlutter,
+      alignment: Alignment.topRight,
+      margin: EdgeInsets.all(50),
+      color: Colors.white,
+      padding: EdgeInsets.fromLTRB(30, 30, 0, 30),
     ),
   );
   var appBar = AppBar(
