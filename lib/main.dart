@@ -11,14 +11,30 @@ void main() {
     width: 200,
     height: 200,
   );
-  var appBody = Center(
-    child: Container(
-      child: hiFlutter,
-      alignment: Alignment.topRight,
-      margin: EdgeInsets.all(50),
-      color: Colors.white,
-      padding: EdgeInsets.fromLTRB(30, 30, 0, 30),
-    ),
+  var appBody = GridView.count(
+    primary: false,
+    crossAxisCount: 2,
+    padding: EdgeInsets.all(10),
+    crossAxisSpacing: 10,
+    mainAxisSpacing: 10,
+    children: <Widget> [
+      Container(
+        child: const Text("1"),
+        color: Colors.red,
+      ),
+      Container(
+        child: const Text("2"),
+        color: Colors.deepOrangeAccent,
+      ),
+      Container(
+        child: const Text("3"),
+        color: Colors.orange,
+      ),
+      Container(
+        child: const Text("4"),
+        color: Colors.blueGrey,
+      ),
+    ],
   );
   var appBar = AppBar(
     title: appTitle,
@@ -39,18 +55,18 @@ void main() {
 //   const MyApp({super.key});
 //
 //   // This widget is the root of your application.
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Flutter Demo',
-//       theme: ThemeData(
-//         // This is the theme of your application.
-//         //
-//         // Try running your application with "flutter run". You'll see the
-//         // application has a blue toolbar. Then, without quitting the app, try
-//         // changing the primarySwatch below to Colors.green and then invoke
-//         // "hot reload" (press "r" in the console where you ran "flutter run",
-//         // or simply save your changes to "hot reload" in a Flutter IDE).
+// //   @override
+// //   Widget build(BuildContext context) {
+// //     return MaterialApp(
+// //       title: 'Flutter Demo',
+// //       theme: ThemeData(
+// //         // This is the theme of your application.
+// //         //
+// //         // Try running your application with "flutter run". You'll see the
+// //         // application has a blue toolbar. Then, without quitting the app, try
+// //         // changing the primarySwatch below to Colors.green and then invoke
+// //         // "hot reload" (press "r" in the console where you ran "flutter run",
+// //         // or simply save your changes to "hot reload" in a Flutter IDE).
 //         // Notice that the counter didn't reset back to zero; the application
 //         // is not restarted.
 //         primarySwatch: Colors.blue,
